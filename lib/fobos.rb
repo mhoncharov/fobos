@@ -1,5 +1,7 @@
 require "fobos/version"
 
 module Fobos
-  # Your code goes here...
+  include HTTParty
+
+  require 'fobos/graph_api'
 end

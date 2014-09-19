@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Fobos::VERSION
   spec.authors       = ["Max Goncharov"]
   spec.email         = ["mxgoncahrov@gmail.com"]
-  spec.summary       = %q{FoBos is based on HTTParty gem for using Facebook Graph and REST API.}
+  spec.summary       = %q{Fobos is based on HTTParty gem for using Facebook Graph and REST API.}
   spec.description   = %q{}
   spec.homepage      = ""
   spec.license       = "MIT"
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+
+  spec.add_dependency "httparty", "~> 0.13"
 end
