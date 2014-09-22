@@ -3,6 +3,7 @@ module Fobos
     class Users
       include HTTParty
 
+      # You can get access token with Fobos::GraphAPI::Oauth.
       attr_accessor :access_token
 
       # Store Facebook default URL
@@ -11,8 +12,6 @@ module Fobos
       GRAPH_URI = 'https://graph.facebook.com'
 
       # Need access token for making calls.
-      #
-      # Access token you can get with Fobos::GraphAPI::OAuth.
       def initialize(access_token)
         @access_token = access_token
       end
