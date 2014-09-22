@@ -8,6 +8,7 @@ module Fobos
 
 
     class OAuth
+      require 'cgi'
       include HTTParty
 
 
@@ -59,7 +60,9 @@ module Fobos
 
       # Provide call of link what is result of get_user_access_token_url
       def get_user_access_token(oauth_callback_url = @oauth_callback_url, code)
-        self.class.get(get_user_access_token_url(oauth_callback_url, code))
+        response = self.class.get(get_user_access_token_url(oauth_callback_url, code))
+        parsed_params = CGI::parse(response.parsed_response)
+        parsed_params["access_token"].first
       end
 
       # Return users access code from params which returned by Facebook
