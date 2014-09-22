@@ -1,6 +1,11 @@
 # Fobos
 
-TODO: Write a gem description
+Fobos is a easy to use, based on HTTParty gem for working with Facebook Graph and REST API.
+
+
+It's Ruby based, so it compatible with any frameworks like Rails, Sinatra, etc.
+
+In current version it works only with basic Facebook Graph API features. In next versions REST API and new features for Graph API will be added.
 
 ## Installation
 
@@ -19,8 +24,36 @@ Or install it yourself as:
     $ gem install fobos
 
 ## Usage
+At first you need to initialize OAuth.
 
-TODO: Write usage instructions here
+```ruby
+oauth = Fobos::GraphAPI::OAuth.new(app_id, app_secret, oauth_callback_url)
+```
+
+Then call method which generate URL for getting access code.
+
+```ruby
+access_code_url = oauth.get_user_access_code_url
+```
+
+**OR**, you can make HTTP request.
+
+```ruby
+oauth.get_user_access_code
+```
+
+Now you can get access token from access code.
+
+```ruby
+oauth.get_user_access_token
+```
+
+On oauth_callback_url facebook will send token in params.
+
+
+With access token you can make requests to Facebook Graph API.
+
+Use Fobos::GraphAPI::Users for working with user's data and Fobos::GraphAPI::Pages for working with Facebook Pages.
 
 ## Contributing
 
