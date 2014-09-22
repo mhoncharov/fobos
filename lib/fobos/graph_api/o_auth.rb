@@ -1,3 +1,6 @@
+require 'cgi'
+require 'httparty'
+
 module Fobos
   module GraphAPI
     # Provides generating of access codes and access tokens for working with Facebook API.
@@ -8,7 +11,6 @@ module Fobos
 
 
     class OAuth
-      require 'cgi'
       include HTTParty
 
 

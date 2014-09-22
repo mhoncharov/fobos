@@ -1,3 +1,6 @@
+require 'cgi'
+require 'httparty'
+
 module Fobos
   module GraphAPI
     class Pages
