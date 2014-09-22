@@ -1,5 +1,7 @@
 module Fobos
   module GraphAPI
+    include HTTParty
+
     # Provides generating of access codes and access tokens for working with Facebook API.
     #
     #
