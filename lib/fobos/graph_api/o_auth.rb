@@ -1,7 +1,5 @@
 module Fobos
   module GraphAPI
-    include HTTParty
-
     # Provides generating of access codes and access tokens for working with Facebook API.
     #
     #
@@ -10,6 +8,8 @@ module Fobos
 
 
     class OAuth
+      include HTTParty
+
 
       # ID of your Facebook App. You can get in your app's manage page.
       attr_accessor :app_id
@@ -41,13 +41,13 @@ module Fobos
 
         query = "/dialog/oauth?client_id=#{@app_id}&redirect_uri=#{oauth_callback_url}#{options_part}"
 
-        FB_URI.to_s + query.to_s
-
+        (FB_URI.to_s + query.to_s).to_s
       end
 
       # Provide call of link what is result of get_user_access_code_url
       def get_user_access_code(oauth_callback_url = @oauth_callback_url, options = {})
-        self.class.get(get_user_access_code_url(oauth_callback_url, options))
+        uri = get_user_access_code_url(oauth_callback_url, options)
+        self.class.get(uri)
       end
 
       # Generate link for getting user's <b>ACCESS TOKEN</b> by code given with get_user_access_code
