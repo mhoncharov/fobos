@@ -58,7 +58,7 @@ module Fobos
         GRAPH_URI.to_s + query.to_s
       end
 
-      # Provide call of link what is result of get_user_access_token_url
+      # Provide call of link what is result of get_user_access_token_url. Returned parsed access_token.
       def get_user_access_token(oauth_callback_url = @oauth_callback_url, code)
         response = self.class.get(get_user_access_token_url(oauth_callback_url, code))
         parsed_params = CGI::parse(response.parsed_response)
