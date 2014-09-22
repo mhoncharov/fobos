@@ -19,7 +19,7 @@ module Fobos
       # Provides getting user's data with options.
       # Options must be a hash. You can provide value as String or Array.
       #
-      # E.g. Fobos::GraphAPI::User.new(access_token).get_request(fields: 'id,first_name,last_name') will return ID, FIRST NAME and LAST NAME of user.
+      # E.g. Fobos::GraphAPI::Users.new(access_token).get_request(fields: 'id,first_name,last_name') will return ID, FIRST NAME and LAST NAME of user.
       def get_request(options = {})
         options_part = ''
         options_part = options.map {|k,v| "#{k}=#{v.kind_of?(Array) ? v.join(',') : v}" }.join('&') unless options.empty?
@@ -32,7 +32,7 @@ module Fobos
       # Provides sending post request (publishing) for user.
       # Options must be a hash. You can provide value as String or Array.
       #
-      # E.g. Fobos::GraphAPI::User.new(access_token).post_request(message: 'This is test message') will post "This is test message" to user's feed.
+      # E.g. Fobos::GraphAPI::Users.new(access_token).post_request(message: 'This is test message') will post "This is test message" to user's feed.
       def post_request(options = {})
         options_part = ''
         options_part = options.map {|k,v| "#{k}=#{v.kind_of?(Array) ? v.join(',') : v}" }.join('&') unless options.empty?
