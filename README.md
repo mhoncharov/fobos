@@ -36,16 +36,16 @@ Then call method which generate URL for getting access code.
 access_code_url = oauth.get_user_access_code_url
 ```
 
-**OR**, you can make HTTP request.
+**THEN**, you need make HTTP request.
 
 ```ruby
-oauth.get_user_access_code
+redirect_to access_code_url
 ```
 
 Now you can get access token from access code.
 
 ```ruby
-oauth.get_user_access_token
+oauth.get_user_access_token(access_code)
 ```
 
 On oauth_callback_url facebook will send token in params.
