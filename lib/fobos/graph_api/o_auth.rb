@@ -47,12 +47,6 @@ module Fobos
         (FB_URI.to_s + query.to_s).to_s
       end
 
-      # Provide call of link what is result of get_user_access_code_url
-      def get_user_access_code(oauth_callback_url = @oauth_callback_url, options = {})
-        uri = get_user_access_code_url(oauth_callback_url, options)
-        self.class.get(uri)
-      end
-
       # Generate link for getting user's <b>ACCESS TOKEN</b> by code given with get_user_access_code
       def get_user_access_token_url(oauth_callback_url = @oauth_callback_url, code)
         query = "/oauth/access_token?client_id=#{@app_id}&client_secret=#{@app_secret}&code=#{code}&redirect_uri=#{oauth_callback_url}"
