@@ -3,7 +3,7 @@
 Fobos is a easy to use, based on HTTParty gem for working with Facebook Graph and REST API.
 
 
-It's Ruby based, so it compatible with any frameworks like Rails, Sinatra, etc.
+It's Ruby based, so it compatible with any frameworks like Rails, Sinatra, etc. (<b>NOTE:</b> Please use latest version of Fobos. All versions use API v2.1, but latest version have no bugs and have more features.)
 
 In current version it works only with basic Facebook Graph API features. In next versions REST API and new features for Graph API will be added.
 
