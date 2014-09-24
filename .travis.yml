@@ -3,3 +3,4 @@ rvm: 2.1.2
 install: gem update --system
 install: gem update
 install: gem install httparty
+install: bundle install
