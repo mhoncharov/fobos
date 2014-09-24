@@ -39,8 +39,8 @@ module Fobos
       #
       # <b>Options</b> you can see here https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/v2.1#login
       def get_user_access_code_url(oauth_callback_url = @oauth_callback_url, options = {})
-        options_part = ''
-        options_part = "&" + options.map {|k,v| "#{k}=#{v.kind_of?(Array) ? v.join(',') : v}" }.join('&') unless options.empty?
+        options_part = String.new
+        options_part = Options.map_options_to_params(options) unless options.empty?
 
         query = "/dialog/oauth?client_id=#{@app_id}&redirect_uri=#{oauth_callback_url}#{options_part}"
 
