@@ -1,8 +1,6 @@
 language: ruby
 rvm: 2.1.2
-before_install:
-  - echo 'BEFORE INSTALL START'
+script:
   - gem install bundler
-  - echo 'BEFORE INSTALL END'
   - gem update
   - gem install httparty
