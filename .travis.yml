@@ -4,6 +4,5 @@ before_install:
   - echo 'BEFORE INSTALL START'
   - gem install bundler
   - echo 'BEFORE INSTALL END'
-install: gem update --system
-install: gem update
-install: gem install httparty
+  - gem update
+  - gem install httparty
