@@ -49,10 +49,10 @@ module Fobos
       #
       # Use access_token from Fobos::GraphAPI::Pages.new
       def get_feed(page_id, options = {})
-        options_part = String.new
-        options_part = Options.map_options_to_params(options) unless options.empty?
+        options.add_access_token_to_options(@access_token)
+        options_part = Options.map_options_to_params(options)
 
-        query = GRAPH_URI.to_s + "/#{page_id}" + "/feed?#{options_part}&access_token=#{@access_token}"
+        query = GRAPH_URI.to_s + "/#{page_id}" + "/feed?#{options_part}"
 
         self.class.get(query)
       end
