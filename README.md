@@ -3,7 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/fobos.svg)](http://badge.fury.io/rb/fobos)
 [![Build Status](https://travis-ci.org/mxgoncharov/fobos.svg?branch=master)](https://travis-ci.org/mxgoncharov/fobos)
 [![Dependency Status](https://gemnasium.com/mxgoncharov/fobos.svg)](https://gemnasium.com/mxgoncharov/fobos)
-[![security](https://hakiri.io/github/plataformatec/devise/master.svg)](https://hakiri.io/github/plataformatec/devise/master)
+[![security](https://hakiri.io/github/mxgoncharov/fobos/master.svg)](https://hakiri.io/github/mxgoncharov/fobos/master)
 [![Code Climate](https://codeclimate.com/github/mxgoncharov/fobos/badges/gpa.svg)](https://codeclimate.com/github/mxgoncharov/fobos)
 
 Fobos is a easy to use, based on HTTParty gem for working with Facebook Graph and REST API.
