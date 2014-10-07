@@ -5,7 +5,6 @@ module Fobos
   module GraphAPI
     class Pages
       include HTTParty
-      include Hash
 
       # You can get access token with Fobos::GraphAPI::Oauth.
       attr_accessor :access_token
