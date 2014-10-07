@@ -1,5 +1,6 @@
 require 'cgi'
 require 'httparty'
+require 'hash'
 
 module Fobos
   module GraphAPI
