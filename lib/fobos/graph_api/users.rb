@@ -1,11 +1,12 @@
 require 'cgi'
 require 'httparty'
-require 'hash'
 
 module Fobos
   module GraphAPI
     class Users
       include HTTParty
+      include Hash
+
       # You can get access token with Fobos::GraphAPI::Oauth.
       attr_accessor :access_token
 
